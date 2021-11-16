@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_gravity="center"
+    tools:context=".EditPage">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="5dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"
+        android:text="Enter an Address to update\n its Longitude and Lattitude!" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp">
+        <com.example.geotracker.AutoCompleteView
+            android:id="@+id/address_Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:textStyle="bold"
+            android:completionThreshold="1"
+            android:ems="10"
+            android:hint="Address..."
+            android:inputType="textPersonName"
+            android:paddingVertical="5dp"></com.example.geotracker.AutoCompleteView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SEARCH"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/buttonSearch">
+            </Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DISCOVER"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/discoverLatLon">
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/latView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingVertical="5dp"
+            android:text="Latitude: " />
+        <EditText
+            android:id="@+id/latDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/lonView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingVertical="5dp"
+            android:text="Latitude: " />
+        <EditText
+            android:id="@+id/lonDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <Button
+                    android:id="@+id/update_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update!"
+                    android:layout_gravity="center"/>
+                <Button
+                    android:id="@+id/delete_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="DELETE"
+                    android:backgroundTint="@color/red"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

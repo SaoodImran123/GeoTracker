@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <com.example.geotracker.AutoCompleteViewMain
+            android:id="@+id/address_Search_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:completionThreshold="1"
+            android:ems="10"
+            android:hint="Enter Address"
+            android:inputType="textPersonName"
+            android:paddingVertical="5dp"
+            android:layout_marginRight="40dp"
+            android:textStyle="bold"></com.example.geotracker.AutoCompleteViewMain>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_search"
+            android:text="SEARCH"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/loc_address"
+        android:layout_width="match_parent"
+        android:layout_height="546dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Address"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/button_EditPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UPDATE PAGE" />
+
+</LinearLayout>
